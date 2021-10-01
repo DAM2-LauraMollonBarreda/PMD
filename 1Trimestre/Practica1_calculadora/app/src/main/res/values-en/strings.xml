@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="texto_princ">Welcome to my calculator APP</string>
+    <string name="primer_num">Enter the first number:</string>
+    <string name="segun_num">Enter the second number:</string>
+    <string name="num_uno">Number 1</string>
+    <string name="num_dos">Number 2</string>
+    <string name="sumar">Equal</string>
+    <string name="restar">Subtract</string>
+    <string name="multiplicar">Multiply</string>
+    <string name="dividir">Divide</string>
+</resources>
