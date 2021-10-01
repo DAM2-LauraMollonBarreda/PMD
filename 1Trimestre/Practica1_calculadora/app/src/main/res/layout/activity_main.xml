@@ -55,35 +55,35 @@
         android:padding="16dp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_sumar"
-            android:layout_width="wrap_content"
+            android:layout_width="89dp"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
             android:text="@string/sumar" />
 
         <Button
             android:id="@+id/btn_restar"
-            android:layout_width="wrap_content"
+            android:layout_width="91dp"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
             android:text="@string/restar" />
 
         <Button
             android:id="@+id/btn_multiplicar"
-            android:layout_width="wrap_content"
+            android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
             android:text="@string/multiplicar" />
 
         <Button
             android:id="@+id/btn_dividir"
-            android:layout_width="wrap_content"
+            android:layout_width="89dp"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
             android:text="@string/dividir" />
