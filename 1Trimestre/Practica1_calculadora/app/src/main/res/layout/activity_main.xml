@@ -10,7 +10,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="49dp"
         android:padding="16dp"
         android:text="@string/texto_princ"
         android:textColor="@color/grey"
@@ -33,7 +33,7 @@
     <EditText
         android:id="@+id/et_numero1"
         android:layout_width="match_parent"
-        android:layout_height="46dp"
+        android:layout_height="49dp"
         android:hint="@string/num_uno"
         android:inputType="number"
         android:padding="16dp" />
@@ -49,14 +49,14 @@
     <EditText
         android:id="@+id/et_numero2"
         android:layout_width="match_parent"
-        android:layout_height="49dp"
+        android:layout_height="55dp"
         android:hint="@string/num_dos"
         android:inputType="number"
         android:padding="16dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="43dp"
         android:layout_margin="5dp"
         android:orientation="horizontal">
 
