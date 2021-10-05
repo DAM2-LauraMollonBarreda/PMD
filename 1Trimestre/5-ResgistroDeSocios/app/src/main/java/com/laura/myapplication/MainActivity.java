@@ -1,15 +1,23 @@
 package com.laura.myapplication;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.provider.MediaStore;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RatingBar;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Bitmap fotoSocioTomada;
+    private ImageView socioImagen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
             String apellidoSocio=etApellidos.getText().toString();
             String bioSocio = etBio.getText().toString();
             Float puntuacion=rtBar.getRating();
+
+            //Parte b: Creamos una variable de tipo imagen
+            socioImagen = findViewById(R.id.socio_imagen);
+            //Parte b 2 : Implementamos en onClickListener
+            socioImagen.setOnClickListener(v -> {
+                abrirCamara();
+            });
 
             //1-Nos creamos el intent irDetalle
             Intent irDetalle = new Intent(this, DetailActivity.class);
@@ -53,5 +68,23 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+    }
+
+    private void abrirCamara() {
+        Intent camaraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(camaraIntent, 1000);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode== Activity.RESULT_OK && requestCode ==1000){
+            if (data != null){
+                fotoSocioTomada = data.getExtras().getParcelable("data");
+                socioImagen.setImageBitmap(fotoSocioTomada);
+
+            }
+        }
     }
 }
