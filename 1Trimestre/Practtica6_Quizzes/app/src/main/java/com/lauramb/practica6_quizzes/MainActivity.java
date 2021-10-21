@@ -11,24 +11,28 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    //Declaramos los botones y llamamos a la clase pregunta
     private Pregunta[] preguntas = new Pregunta[3];
-    private int preguntaAnterior;
     RadioButton rb1, rb2,rb3;
     TextView pregunta, numeroPregunta;
     Button botonSend;
 
-    int respuestasCorrectas = 0;
-    int respuestasIncorrectas = 0;
+    private int preguntaActual;
+    int buenas = 0;
+    int malas = 0;
 
     @Override
+    //Cuando se abre la aplicacion
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        preguntas[0] = new Pregunta(1, "Rey de España en 2021", "Felipe VI", "Felipe V", "Juan Carlos I", 1);
-        preguntas[1] = new Pregunta(2, "Heredera de la corona", "Letizia Ortiz", "Sofia de Borbon", "Leonor de Borbon", 3);
-        preguntas[2] = new Pregunta(3, "Residencia habitual de los reyes", "Palacio de Oriente", "Palacio la Zarzuela", "Palacio de los maestres de Santiago.", 2);
+        //Se cargan tres preguntas
+        preguntas[0] = new Pregunta("1/3", "Rey de España en 2021", "Felipe VI", "Felipe V", "Juan Carlos I", 1);
+        preguntas[1] = new Pregunta("2/3", "Heredera de la corona", "Letizia Ortiz", "Sofia de Borbon", "Leonor de Borbon", 3);
+        preguntas[2] = new Pregunta("3/3", "Residencia habitual de los reyes", "Palacio de Oriente", "Palacio la Zarzuela", "Palacio de los maestres de Santiago.", 2);
 
+        //Se asocian los botones al diseño
         pregunta= (TextView) findViewById(R.id.txtvPregunta);
         numeroPregunta= (TextView) findViewById(R.id.txtvNumero);
 
@@ -38,30 +42,63 @@ public class MainActivity extends AppCompatActivity {
 
         botonSend=(Button)findViewById(R.id.btnSend);
 
-        preguntaAnterior=0;
 
-        botonSend.setOnClickListener(new View.OnClickListener(){
 
-            @Override
-            public void onClick(View view) {
-                int respuestaSeleccionada = -1;
-                boolean seleccionada = true;
+        //Cuando se pulsa el boton enviar
+        botonSend.setOnClickListener(view -> {
+            validarPasarSiguiente();
 
-                if (seleccionada = true) {
-                    if (rb1.isChecked()) {
-                        respuestaSeleccionada = 1;
-                    } else if (rb2.isChecked()) {
-                        respuestaSeleccionada = 2;
-                    } else if (rb3.isChecked()) {
-                        respuestaSeleccionada = 3;
-                    } else {
-                        Toast toast = Toast.makeText(getApplicationContext(), "No hay respuestas seleccionadas", Toast.LENGTH_SHORT);
-                        toast.show();
-                        seleccionada = false;
-                        return;
-                    }
-                }
-            }
         });
+        mostrarPreguntaActual();
     }
+
+    private void validarPasarSiguiente() {
+        //Obtenemos lo que el usuario a seleccionado
+        int resulSelec=0;
+        if (rb1.isChecked()){
+            resulSelec=1;
+        }else if (rb2.isChecked()){
+            resulSelec=2;
+        }else if (rb3.isChecked()){
+            resulSelec=3;
+        }else{
+            Toast.makeText(this, "Selecciona una opcion", Toast.LENGTH_SHORT).show();
+        }
+
+        //Guadarmos si la respuesta dada es correcta
+        if (preguntas[0].getRespuestaCorrecta()== resulSelec){
+            buenas++;
+            preguntaActual++;
+
+            //Metodo para pasar a la pantalla 2
+            pantalla2();
+            mostrarPreguntaActual();
+            rb1.setChecked(false);
+            rb2.setChecked(false);
+            rb3.setChecked(false);
+        }else{
+            malas++;
+            Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+        }
+
+
+    }
+
+    private void pantalla2() {
+        //Intent irSegunda = new Intent(this, SecondActivity.class);
+
+        //startActivity(irSegunda);
+    }
+
+
+    public void mostrarPreguntaActual(){
+        Pregunta numPregunta =preguntas[preguntaActual];
+        numeroPregunta.setText(numPregunta.getNumero());
+        Pregunta infoDePregunta = preguntas[preguntaActual];
+        pregunta.setText(infoDePregunta.getPregunta());
+        rb1.setText(infoDePregunta.getRespuesta()[0]);
+        rb2.setText(infoDePregunta.getRespuesta()[1]);
+        rb3.setText(infoDePregunta.getRespuesta()[2]);
+    }
+
 }

@@ -1,16 +1,16 @@
 package com.lauramb.practica6_quizzes;
 
 public class Pregunta {
-    private int numero;
+    private String numero;
     private String pregunta;
     private String[] respuesta = new String[3];
     private int respuestaCorrecta;
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
@@ -40,8 +40,9 @@ public class Pregunta {
 
 
 
-    public Pregunta(int numero, String pregunta, String rb1, String rb2, String rb3, int respuestaCorrecta) {
+    public Pregunta(String numero, String pregunta, String rb1, String rb2, String rb3, int respuestaCorrecta) {
         this.numero = numero;
+        this.pregunta=pregunta;
         this.respuesta [0] = rb1;
         this.respuesta [1] = rb2;
         this.respuesta[2] = rb3;
