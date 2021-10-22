@@ -69,8 +69,9 @@ public class MainActivity extends AppCompatActivity {
         if (preguntas[preguntaActual].getRespuestaCorrecta()== resulSelec){
             buenas++;
 
-            pantalla2();
             preguntaActual++;
+            pantalla2();
+
 
             mostrarPreguntaActual();
 
