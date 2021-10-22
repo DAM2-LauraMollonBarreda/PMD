@@ -25,8 +25,8 @@ public class PantallaSecundaria extends AppCompatActivity {
 
 
         boton.setOnClickListener(view -> {
-            /*String textBoton = boton.getText().toString();
-            String next="Siguiente";*/
+            String textBoton = boton.getText().toString();
+            String next="Siguiente";
 
             /*if(textBoton==next){*/
                super.onBackPressed();
