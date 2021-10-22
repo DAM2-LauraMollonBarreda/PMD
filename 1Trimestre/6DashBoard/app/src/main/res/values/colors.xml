@@ -24,5 +24,6 @@
     <color name="darkviolet_dark">#683DD4</color>
     <color name="violet">#D65AEE</color>
     <color name="violet_dark">#b33EC9</color>
+    <color name = "grey">#9b9b9b</color>
 
 </resources>

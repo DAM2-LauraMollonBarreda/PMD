@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">6DashBoard</string>
+
+    <!--Calculadora-->
+    <string name="texto_princ">Bienvenidos a mi APP calculadora</string>
+    <string name="primer_num">Introduzca el primer número:</string>
+    <string name="segun_num">Introduzca el segundo número:</string>
+    <string name="num_uno">Número 1</string>
+    <string name="num_dos">Número 2</string>
+    <string name="sumar">Sumar</string>
+    <string name="restar">Restar</string>
+    <string name="multiplicar">Mult</string>
+    <string name="dividir">Dividir</string>
+
+
+    <!--Edad canina-->
+    <string name="pregunta_pal">¿Cuantos años tienes?</string>
+    <string name="intro_edad">Introduce tu edad</string>
+    <string name="btn_calcular">Calcular</string>
+
+    <string name="txt_resultado">Si fueras perro tu edad seria: %d  años</string>
+    <string name="msg_toast">No has introducido ningún número.</string>
+
+
 </resources>
