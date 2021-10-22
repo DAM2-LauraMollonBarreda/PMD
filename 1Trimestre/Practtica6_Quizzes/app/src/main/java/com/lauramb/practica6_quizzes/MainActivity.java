@@ -66,13 +66,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Guadarmos si la respuesta dada es correcta
-        if (preguntas[0].getRespuestaCorrecta()== resulSelec){
+        if (preguntas[preguntaActual].getRespuestaCorrecta()== resulSelec){
             buenas++;
             preguntaActual++;
-
-            //Metodo para pasar a la pantalla 2
             pantalla2();
+
             mostrarPreguntaActual();
+
             rb1.setChecked(false);
             rb2.setChecked(false);
             rb3.setChecked(false);
@@ -82,12 +82,22 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+
+
     }
-
+    //Metodo para pasar a la pantalla 2
     private void pantalla2() {
-        //Intent irSegunda = new Intent(this, SecondActivity.class);
-
-        //startActivity(irSegunda);
+        if (preguntaActual<3){
+            Intent irSegunda = new Intent(this, PantallaSecundaria.class);
+            irSegunda.putExtra("Resultado correcto", "Correcto!");
+            irSegunda.putExtra("Boton", "Siguiente");
+            startActivity(irSegunda);
+        }else{
+            Intent irSegunda = new Intent(this, PantallaSecundaria.class);
+            irSegunda.putExtra("Resultado correcto", "Has acabado el juego!");
+            irSegunda.putExtra("Boton","Comenzar el juego");
+            startActivity(irSegunda);
+        }
     }
 
 
