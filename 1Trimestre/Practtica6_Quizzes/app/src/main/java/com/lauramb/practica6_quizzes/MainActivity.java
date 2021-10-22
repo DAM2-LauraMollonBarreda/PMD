@@ -68,8 +68,9 @@ public class MainActivity extends AppCompatActivity {
         //Guadarmos si la respuesta dada es correcta
         if (preguntas[preguntaActual].getRespuestaCorrecta()== resulSelec){
             buenas++;
-            preguntaActual++;
+
             pantalla2();
+            preguntaActual++;
 
             mostrarPreguntaActual();
 
@@ -91,11 +92,13 @@ public class MainActivity extends AppCompatActivity {
             Intent irSegunda = new Intent(this, PantallaSecundaria.class);
             irSegunda.putExtra("Resultado correcto", "Correcto!");
             irSegunda.putExtra("Boton", "Siguiente");
+            irSegunda.putExtra("Pregunta",preguntaActual);
             startActivity(irSegunda);
         }else{
             Intent irSegunda = new Intent(this, PantallaSecundaria.class);
             irSegunda.putExtra("Resultado correcto", "Has acabado el juego!");
             irSegunda.putExtra("Boton","Comenzar el juego");
+            irSegunda.putExtra("Ultima",true);
             startActivity(irSegunda);
         }
     }
