@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Mis aplicaciones</string>
+    <!--Calculadora-->
+    <string name="texto_princ">Bienvenidos a mi APP calculadora</string>
+    <string name="primer_num">Introduzca el primer número:</string>
+    <string name="segun_num">Introduzca el segundo número:</string>
+    <string name="num_uno">Número 1</string>
+    <string name="num_dos">Número 2</string>
+    <string name="sumar">Sumar</string>
+    <string name="restar">Restar</string>
+    <string name="multiplicar">Mult</string>
+    <string name="dividir">Dividir</string>
+
+    <!--Edad canina-->
+    <string name="pregunta_pal">¿Cuantos años tienes?</string>
+    <string name="intro_edad">Introduce tu edad</string>
+    <string name="btn_calcular">Calcular</string>
+
+    <string name="txt_resultado">Si fueras perro tu edad seria: %d  años</string>
+    <string name="msg_toast">No has introducido ningún número.</string>
+
+    <!--Quizzes-->
+    <string name="pregunta1">Rey de España en 2021</string>
+    <string name="pregunta2">Heredera de la corona</string>
+    <string name="pregunta3">Residencia habitual de los reyes</string>
+    <string name="respuesta1.1">Felipe VI</string>
+    <string name="respuesta1.2">Felipe V</string>
+    <string name="respuesta1.3">Juan Carlos I</string>
+    <string name="respuesta2.1">Letizia Ortiz</string>
+    <string name="respuesta2.2">Sofia de Borbon</string>
+    <string name="respuesta2.3">Leonor de Borbon</string>
+    <string name="respuesta3.1">Palacio de Oriente</string>
+    <string name="respuesta3.2">Palacio la zarzuela</string>
+    <string name="respuesta3.3">Palacio de los maestres de Santiago</string>
+    <string name="seleccionaOpcicion">Selecciona una opcion, para poder continuar</string>
+    <string name="resIncorrecta">Respuesta incorrecta, prueba otra vez</string>
+    <string name="correcto">Correcto!!</string>
+    <string name="siguiente">Continua</string>
+    <string name="juegoFin">Juego acabado, ¿quieres volver a empezar?</string>
+    <string name="juegoOtra">Volver a empezar</string>
+</resources>

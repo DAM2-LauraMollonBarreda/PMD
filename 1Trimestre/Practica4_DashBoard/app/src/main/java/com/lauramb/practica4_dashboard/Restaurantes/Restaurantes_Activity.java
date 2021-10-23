@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.lauramb.practica4_dashboard.R;
+
 public class Restaurantes_Activity extends AppCompatActivity {
 
     @Override

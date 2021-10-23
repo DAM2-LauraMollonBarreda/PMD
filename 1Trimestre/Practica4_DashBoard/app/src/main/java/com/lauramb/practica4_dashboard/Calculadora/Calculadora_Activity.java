@@ -1,6 +1,4 @@
-package com.laura.a6dashboard.activities;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.lauramb.practica4_dashboard.Calculadora;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -9,7 +7,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.laura.a6dashboard.R;
+import androidx.appcompat.app.AppCompatActivity;
+import com.lauramb.practica4_dashboard.R;
 
 public class Calculadora_Activity extends AppCompatActivity {
 
