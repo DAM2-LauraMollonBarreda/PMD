@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Se cargan tres preguntas
-        preguntas[0] = new Pregunta("1/3", "Rey de España en 2021", "Felipe VI", "Felipe V", "Juan Carlos I", 1);
-        preguntas[1] = new Pregunta("2/3", "Heredera de la corona", "Letizia Ortiz", "Sofia de Borbon", "Leonor de Borbon", 3);
-        preguntas[2] = new Pregunta("3/3", "Residencia habitual de los reyes", "Palacio de Oriente", "Palacio la Zarzuela", "Palacio de los maestres de Santiago.", 2);
+        preguntas[0] = new Pregunta("1/3", getString(R.string.pregunta1), getString(R.string.respuesta1_1), getString(R.string.respuesta1_2), getString(R.string.respuesta1_3), 1);
+        preguntas[1] = new Pregunta("2/3", getString(R.string.pregunta2), getString(R.string.respuesta2_1), getString(R.string.respuesta2_2), getString(R.string.respuesta2_3), 3);
+        preguntas[2] = new Pregunta("3/3", getString(R.string.pregunta3), getString(R.string.respuesta3_1), getString(R.string.respuesta3_2), getString(R.string.respuesta3_3), 2);
 
         //Se asocian los botones al diseño
         pregunta= (TextView) findViewById(R.id.txtvPregunta);
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         }else if (rb3.isChecked()){
             resulSelec=3;
         }else{
-            Toast.makeText(this, "Selecciona una opcion", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.seleccionaOpcicion), Toast.LENGTH_SHORT).show();
         }
 
         //Guadarmos si la respuesta dada es correcta
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             rb3.setChecked(false);
         }else{
             malas++;
-            Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.resIncorrecta), Toast.LENGTH_SHORT).show();
         }
 
 
@@ -92,14 +92,14 @@ public class MainActivity extends AppCompatActivity {
     private void pantalla2() {
         if (preguntaActual<3){
             Intent irSegunda = new Intent(this, PantallaSecundaria.class);
-            irSegunda.putExtra("Resultado correcto", "Correcto!");
-            irSegunda.putExtra("Boton", "Siguiente");
+            irSegunda.putExtra("Resultado correcto", getString(R.string.correcto));
+            irSegunda.putExtra("Boton", getString(R.string.siguiente));
             irSegunda.putExtra("Pregunta",preguntaActual);
             startActivity(irSegunda);
         }else{
             Intent irSegunda = new Intent(this, PantallaSecundaria.class);
-            irSegunda.putExtra("Resultado correcto", "Has acabado el juego!");
-            irSegunda.putExtra("Boton","Comenzar el juego");
+            irSegunda.putExtra("Resultado correcto", getString(R.string.juegoFin));
+            irSegunda.putExtra("Boton",getString(R.string.juegoOtra));
             irSegunda.putExtra("Ultima",true);
             startActivity(irSegunda);
         }

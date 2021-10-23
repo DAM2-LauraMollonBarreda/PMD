@@ -1,4 +1,23 @@
 <resources>
     <string name="app_name">Quizzes</string>
+    <string name="pregunta1">Rey de España en 2021</string>
+    <string name="pregunta2">Heredera de la corona</string>
+    <string name="pregunta3">Residencia habitual de los reyes</string>
+    <string name="respuesta1.1">Felipe VI</string>
+    <string name="respuesta1.2">Felipe V</string>
+    <string name="respuesta1.3">Juan Carlos I</string>
+    <string name="respuesta2.1">Letizia Ortiz</string>
+    <string name="respuesta2.2">Sofia de Borbon</string>
+    <string name="respuesta2.3">Leonor de Borbon</string>
+    <string name="respuesta3.1">Palacio de Oriente</string>
+    <string name="respuesta3.2">Palacio la zarzuela</string>
+    <string name="respuesta3.3">Palacio de los maestres de Santiago</string>
+    <string name="seleccionaOpcicion">Selecciona una opcion, para poder continuar</string>
+    <string name="resIncorrecta">Respuesta incorrecta, prueba otra vez</string>
+    <string name="correcto">Correcto!!</string>
+    <string name="siguiente">Continua</string>
+    <string name="juegoFin">Juego acabado, ¿quieres volver a empezar?</string>
+    <string name="juegoOtra">Volver a empezar</string>
+
 
 </resources>

@@ -1,3 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-</resources>
+
+    <resources>
+        <string name = "app_name"> Quizzes </string>
+        <string name = "pregunta1"> King of Spain in 2021 </string>
+        <string name = "pregunta2"> Heir to the crown </string>
+        <string name = "pregunta3"> Usual residence of the kings </string>
+        <string name = "respuesta1.1"> Felipe VI </string>
+        <string name = "respuesta1.2"> Felipe V </string>
+        <string name = "respuesta1.3"> Juan Carlos I </string>
+        <string name = "respuesta2.1"> Letizia Ortiz </string>
+        <string name = "respuesta2.2"> Sofia de Borbon </string>
+        <string name = "respuesta2.3"> Leonor de Borbon </string>
+        <string name = "respuesta3.1"> Palace de Oriente </string>
+        <string name = "respuesta3.2"> Palace la zarzuela </string>
+        <string name = "respuesta3.3"> Palace of the Masters of Santiago </string>
+        <string name = "seleccionaOpcicion"> Select an option, to continue </string>
+        <string name = "resIncorrecta"> Incorrect answer, try again </string>
+        <string name = "correcto"> Correct !! </string>
+        <string name = "siguiente"> Continue </string>
+        <string name = "juegoFin"> Game over, do you want to start over? </string>
+        <string name = "juegoOtra"> Start over </string>
+
+    </resources>

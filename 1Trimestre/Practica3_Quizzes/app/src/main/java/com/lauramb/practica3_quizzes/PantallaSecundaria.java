@@ -29,7 +29,7 @@ public class PantallaSecundaria extends AppCompatActivity {
             boton.setOnClickListener(view -> {
 
 
-                if(boton.getText().equals("Siguiente")){
+                if(boton.getText().equals(getString(R.string.siguiente))){
                     super.onBackPressed();
                 }else{
                     Intent nuevo = new Intent(this,MainActivity.class);
