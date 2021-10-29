@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Baloncesto: marcadaor de puntos</string>
+    <string name="errorRestar">No puedes restar puntos a 0 puntos</string>
+    <string name="local">Local</string>
+    <string name="vistante">Vistante</string>
+    <string name="local_vistante">Local-Vistante</string>
+    <string name="parEmpatado">Partido empatado</string>
+    <string name="parGaV">Partido ganado por el equipo visitante</string>
+    <string name="parGaL">Partido ganado por el equipo local</string>
+    <string name="marcadoresCero">Los marcadores ya estan en 0</string>
+</resources>

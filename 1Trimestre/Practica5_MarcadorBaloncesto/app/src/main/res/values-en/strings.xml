@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name = "app_name"> Basketball: score marker </string>
+    <string name = "errorRestar"> You cannot subtract points from 0 points </string>
+    <string name = "local"> Local </string>
+    <string name="vistante">Visitor</string>
+    <string name = "local_vistante"> Local-Visitor </string>
+    <string name = "parEmpatado"> Tie match </string>
+    <string name = "parGaV"> Match won by the visiting team </string>
+    <string name = "parGaL"> Match won by local team </string>
+    <string name="marcadoresCero">The markers are already at 0</string>
+</resources>
