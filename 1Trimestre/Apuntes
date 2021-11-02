@@ -1,4 +1,8 @@
-Video:Modem DashBoard ui desing 
+Video:Modem DashBoard ui desing (de creacion del dashboard)
 Pagina de iconos: flaticon,iconfinder
 Canal de youtube:Mouredev 
 
+Librerias para insertar imagenes de internet:
+  Picasso
+  Glide
+  Volley
