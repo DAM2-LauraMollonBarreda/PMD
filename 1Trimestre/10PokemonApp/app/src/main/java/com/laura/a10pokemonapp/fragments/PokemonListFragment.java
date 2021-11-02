@@ -1,7 +1,9 @@
 package com.laura.a10pokemonapp.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 import com.laura.a10pokemonapp.MainActivity;
 import com.laura.a10pokemonapp.R;
 import com.laura.a10pokemonapp.adapter.PokemonListAdapter;
+import com.laura.a10pokemonapp.interfaces.iComunicaFragments;
 import com.laura.a10pokemonapp.model.Pokemon;
 
 import java.util.ArrayList;
@@ -34,12 +37,21 @@ public class PokemonListFragment extends Fragment {
     private PokemonListAdapter adaptador;
     private ArrayList<Pokemon> pokemonList= new ArrayList<>();
 
+    //Declara la interfaz que voy a utilizar
+    iComunicaFragments interfaz;
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     public PokemonListFragment() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        interfaz= (iComunicaFragments) context;
     }
 
     /**
@@ -77,16 +89,16 @@ public class PokemonListFragment extends Fragment {
         //2 Apartir de este view vamos a obtener todos los views del fragment
         lvPokemons=view.findViewById(R.id.pokemon_listView);
         //3 Traemos el resto de codigo del MainActivity
-        pokemonList.add(new Pokemon("1","Bulbasaur",Pokemon.Type.PLANT));
-        pokemonList.add(new Pokemon("2","IvySaour",Pokemon.Type.PLANT));
-        pokemonList.add(new Pokemon("3","VenuaSaour",Pokemon.Type.PLANT));
-        pokemonList.add(new Pokemon("4","Charmander",Pokemon.Type.FIRE));
-        pokemonList.add(new Pokemon("5","Charmeleon",Pokemon.Type.WATER));
-        pokemonList.add(new Pokemon("6","Charizard",Pokemon.Type.FIRE));
-        pokemonList.add(new Pokemon("7","Squirtle",Pokemon.Type.WATER));
-        pokemonList.add(new Pokemon("8","Blastoise",Pokemon.Type.ELECTRIC));
-        pokemonList.add(new Pokemon("9","Pikachu",Pokemon.Type.ELECTRIC));
-        pokemonList.add(new Pokemon("10","Raichu",Pokemon.Type.ELECTRIC));
+        pokemonList.add(new Pokemon("1","Bulbasaur","https://cdn.alfabetajuega.com/wp-content/uploads/2020/03/bulbasaur-pok%C3%A9mon.png",R.raw.bulbasaur,Pokemon.Type.PLANT));
+        pokemonList.add(new Pokemon("2","IvySaour","http://pm1.narvii.com/6325/0780aa71d3fc4708553c3b6ed9674e7da61e24d1_00.jpg",R.raw.ivysaur,Pokemon.Type.PLANT));
+        pokemonList.add(new Pokemon("3","VenuaSaour","https://s3.eu-west-3.amazonaws.com/dexertoes-assets-production-7d0f29e6/uploads/2020/09/24185719/venusaur-pokemon-go.png",R.raw.venuasaur,Pokemon.Type.PLANT));
+        pokemonList.add(new Pokemon("4","Charmander","https://media.redadn.es/imagenes/pokemaster_338177.jpg",R.raw.charmander,Pokemon.Type.FIRE));
+        pokemonList.add(new Pokemon("5","Charmeleon","https://images-na.ssl-images-amazon.com/images/I/41czQl59NyL.jpg",R.raw.charmeleon,Pokemon.Type.WATER));
+        pokemonList.add(new Pokemon("6","Charizard","https://images-na.ssl-images-amazon.com/images/I/41czQl59NyL.jpg",R.raw.charizard,Pokemon.Type.FIRE));
+        pokemonList.add(new Pokemon("7","Squirtle","https://images-na.ssl-images-amazon.com/images/I/41czQl59NyL.jpg",R.raw.squirtle,Pokemon.Type.WATER));
+        pokemonList.add(new Pokemon("8","Blastoise","https://images-na.ssl-images-amazon.com/images/I/41czQl59NyL.jpg",R.raw.blastoise,Pokemon.Type.ELECTRIC));
+        pokemonList.add(new Pokemon("9","Pikachu","https://images-na.ssl-images-amazon.com/images/I/41czQl59NyL.jpg",R.raw.pikachu,Pokemon.Type.ELECTRIC));
+        pokemonList.add(new Pokemon("10","Raichu","https://images-na.ssl-images-amazon.com/images/I/41czQl59NyL.jpg",R.raw.raichu,Pokemon.Type.ELECTRIC));
 
         //4 Un contexto siempre va a depender de un activity.
         //Cuando nos pida un contexto desde un fragment podemos obtenerlo con getActivity();
@@ -99,7 +111,8 @@ public class PokemonListFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Pokemon selectedPokemon= (Pokemon) adaptador.getItem(position);
                 if(selectedPokemon!=null){
-                    Toast.makeText(getActivity(),selectedPokemon.getNombre(),Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getActivity(),selectedPokemon.getNombre(),Toast.LENGTH_SHORT).show();
+                    interfaz.enviarPokemon(selectedPokemon);
                 }
             }
         });
