@@ -12,27 +12,34 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.laura.a12restaurantes.placeholder.PlaceholderContent;
+import com.laura.a12restaurantes.model.Restaurante;
 
-/**
- * A fragment representing a list of Items.
- */
+
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class RestauranteFragment extends Fragment {
+    //RECOMENDACION
+    //Declaramos la variable fuera para acceder a la variable fuera del onCreateView
+    RecyclerView recyclerView;
+    MyRestauranteRecyclerViewAdapter adapterRestaurantes;
+
+    //3-Creamos una lista de restaurantes
+    List<Restaurante> restauranteList;
+
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
     private int mColumnCount = 1;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
+
     public RestauranteFragment() {
     }
 
-    // TODO: Customize parameter initialization
-    @SuppressWarnings("unused")
+
+
     public static RestauranteFragment newInstance(int columnCount) {
         RestauranteFragment fragment = new RestauranteFragment();
         Bundle args = new Bundle();
@@ -53,18 +60,31 @@ public class RestauranteFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //Creamos una vista y la infla
+        //Este metodo esta asociado a un xml
         View view = inflater.inflate(R.layout.fragment_restaurante_list, container, false);
 
-        // Set the adapter
+        // Aqui comprobamos que el elemento padre (el xml) sea una instacia de recycleview
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
+            recyclerView = (RecyclerView) view;
             if (mColumnCount <= 1) {
+                //Gestor del recyclerView por defecto,Situa los elemento debajo del otro
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyRestauranteRecyclerViewAdapter(PlaceholderContent.ITEMS));
+            //4-Lista de elementos (Restaurante)
+            restauranteList=new ArrayList<>();
+            //5-Añadimos los restaurantes
+            restauranteList.add(new Restaurante("Pizzeria Don Topo","https://www.cadenadial.com/wp-content/uploads/2015/07/pizza1.jpg",4.0f, "Teruel,España"));
+            restauranteList.add(new Restaurante("Restaurante Le Tour","https://moadrupalweb.blob.core.windows.net/moadrupalweb/original/5571_BurgerKing_HeroImage.jpg",3.0f, "Teruel,España"));
+            restauranteList.add(new Restaurante("Bar La Esquinica","https://moadrupalweb.blob.core.windows.net/moadrupalweb/original/5571_BurgerKing_HeroImage.jpg",5.0f, "Teruel,España"));
+            restauranteList.add(new Restaurante("Bar Manolo","https://moadrupalweb.blob.core.windows.net/moadrupalweb/original/5571_BurgerKing_HeroImage.jpg",1.0f, "IES Chomon,Teruel,España"));
+
+            //2-Asocioamos el adapatador al recicle view
+            adapterRestaurantes= new MyRestauranteRecyclerViewAdapter(getActivity(),restauranteList);
+            recyclerView.setAdapter(adapterRestaurantes);
         }
         return view;
     }
