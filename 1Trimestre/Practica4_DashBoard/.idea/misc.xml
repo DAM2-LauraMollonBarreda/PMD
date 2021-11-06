@@ -3,16 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practica4_DashBoard/app/src/main/res/layout/activity_adaptador_musica.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practica4_DashBoard/app/src/main/res/layout/activity_amigos.xml" value="0.15670289855072464" />
         <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practica4_DashBoard/app/src/main/res/layout/activity_calculadora.xml" value="0.1" />
+        <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practica4_DashBoard/app/src/main/res/layout/activity_detalle_musica.xml" value="0.4" />
         <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practica4_DashBoard/app/src/main/res/layout/activity_edad_canina.xml" value="0.1" />
         <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practica4_DashBoard/app/src/main/res/layout/activity_galeria.xml" value="0.15670289855072464" />
         <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practica4_DashBoard/app/src/main/res/layout/activity_main.xml" value="0.1816123188405797" />
         <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practica4_DashBoard/app/src/main/res/layout/activity_mapas.xml" value="0.15670289855072464" />
+        <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practica4_DashBoard/app/src/main/res/layout/activity_musica.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practica4_DashBoard/app/src/main/res/layout/activity_quizzes_segunda.xml" value="0.2056159420289855" />
         <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practica4_DashBoard/app/src/main/res/layout/activity_restaurantes.xml" value="0.15670289855072464" />
         <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practica4_DashBoard/app/src/main/res/layout/activity_settings.xml" value="0.15670289855072464" />
         <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practica4_DashBoard/app/src/main/res/layout/activity_slapsh.xml" value="0.2" />
+        <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practica4_DashBoard/app/src/main/res/layout/item_musica.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

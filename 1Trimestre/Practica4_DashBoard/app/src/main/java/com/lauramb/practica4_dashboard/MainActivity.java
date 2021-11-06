@@ -11,13 +11,14 @@ import com.lauramb.practica4_dashboard.Calculadora.Calculadora_Activity;
 import com.lauramb.practica4_dashboard.EdadCanina.EdadCanina_Activity;
 import com.lauramb.practica4_dashboard.Galeria.Galeria_Activity;
 import com.lauramb.practica4_dashboard.Mapas.Mapas_Activity;
+import com.lauramb.practica4_dashboard.Musica.Musica_Activity;
 import com.lauramb.practica4_dashboard.Quizzes.Quizzes_Activity;
 import com.lauramb.practica4_dashboard.Restaurantes.Restaurantes_Activity;
 import com.lauramb.practica4_dashboard.Settings.Settings_Activity;
 
 public class MainActivity extends AppCompatActivity {
 
-    RelativeLayout rellay_calculadora, rellay_amigos, rellay_perrete,rellay_quizzes, rellay_galeria, rellay_mapas,rellay_restaurantes, rellay_settings;
+    RelativeLayout rellay_calculadora, rellay_amigos, rellay_perrete,rellay_quizzes, rellay_galeria, rellay_mapas,rellay_restaurantes, rellay_settings,rellay_musica;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         rellay_mapas = findViewById(R.id.rellay_mapas);
         rellay_restaurantes = findViewById(R.id.rellay_restaurantes);
         rellay_settings = findViewById(R.id.rellay_settings);
+        rellay_musica=findViewById(R.id.rellay_musica);
+
 
 
         rellay_calculadora.setOnClickListener(view -> {
@@ -66,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
         });
         rellay_settings.setOnClickListener(view -> {
             Intent intent = new Intent(this, Settings_Activity.class);
+            startActivity(intent);
+        });
+        rellay_musica.setOnClickListener(view ->{
+            Intent intent = new Intent(this, Musica_Activity.class);
             startActivity(intent);
         });
 

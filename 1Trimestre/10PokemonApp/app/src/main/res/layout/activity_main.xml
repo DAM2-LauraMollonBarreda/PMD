@@ -8,21 +8,23 @@
 
     <fragment
         android:id="@+id/pokemon_detail_fragment"
-        android:name="com.laura.a10pokemonapp.fragments.DetailFragment"
+        android:name="com.alberto.a10pokemonapp.fragments.DetailFragment"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         tools:layout="@layout/fragment_detail"/>
 
     <fragment
         android:id="@+id/pokemon_list_fragment"
-        android:name="com.laura.a10pokemonapp.fragments.PokemonListFragment"
+        android:name="com.alberto.a10pokemonapp.fragments.PokemonListFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_below="@+id/pokemon_detail_fragment"
+        android:layout_below="@id/pokemon_detail_fragment"
         tools:layout="@layout/fragment_pokemon_list" />
+
+
 
 </RelativeLayout>

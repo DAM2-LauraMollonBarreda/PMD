@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.laura.a10pokemonapp">
+    package="com.alberto.a10pokemonapp">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 

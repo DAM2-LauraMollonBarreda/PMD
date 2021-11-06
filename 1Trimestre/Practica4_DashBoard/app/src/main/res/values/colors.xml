@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -7,24 +6,35 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="granate_oscuro">#320808</color>
 
-    <color name="red">#F15050</color>
-    <color name="red_dark">#D43C3C</color>
-    <color name="yellow">#EED45A</color>
-    <color name="yellow_dark">#D4BB46</color>
-    <color name="lime">#BCE24A</color>
-    <color name="lime_dark">#9DBF35</color>
-    <color name="green">#48D26B</color>
-    <color name="green_dark">#36B957</color>
-    <color name="blue">#48DFE1</color>
-    <color name="blue_dark">#37C4C6</color>
-    <color name="darkblue"> #5A9CEE</color>
-    <color name="darkblue_dark">#417ECA</color>
-    <color name="darkviolet">#7E50F1</color>
-    <color name="darkviolet_dark">#683DD4</color>
-    <color name="violet">#D65AEE</color>
-    <color name="violet_dark">#b33EC9</color>
-    <color name = "grey">#9b9b9b</color>
 
+    <color name="red">#B40404</color>
+    <color name="red_dark">#8A0808</color>
+
+    <color name="orange">#FE9A2E</color>
+    <color name="orange_dark">#8A4B08</color>
+
+    <color name="yellow">#FFFF00</color>
+    <color name="yellow_dark">#AEB404</color>
+
+    <color name="green">#2EFE2E</color>
+    <color name="green_dark">#4B8A08</color>
+
+    <color name="blue">#00FFFF</color>
+    <color name="blue_dark">#04B4AE</color>
+
+    <color name="darkblue"> #0000FF</color>
+    <color name="darkblue_dark">#0B0B61</color>
+
+    <color name="darkviolet">#8000FF</color>
+    <color name="darkviolet_dark">#4B088A</color>
+
+    <color name="pink">#DF01D7</color>
+    <color name="pink_dark">#8A0868</color>
+
+    <color name="darkpink">#DF0174</color>
+    <color name="darkpink_dark">#610B21</color>
+
+    <color name="grey">#6E6E6E</color>
+    <color name="grey_dark">#2E2E2E</color>
 </resources>
