@@ -1,0 +1,34 @@
+EN LOS ATIVITIS
+1-Creamos el proyecto y en el activity no tocamos nada
+2-Creamos una clase que represente a nuestro tema
+    En nuestro caso es de restaurantes
+    2.1-Creamos los datos que represntan a cada uno de nuestros restaurantes
+    2.2-Creamos el constructor de la clase con los datos que hemos creado en el paso anterior
+    2.3-Creamos los geters y seters de los datos que hemos creado en el 2.1
+3-Creamos un nuevo fragment de tipo list y lo renombramos
+    esto crea dos archivos y un package(placeholder), este package hay que eliminarlo
+4-Vamos al activity que se llama RestauranteFragment
+    4.1-Declaramos variables que vamos a utilizar durante el programa
+        RecyclerView y una variable del tipo del otro fragmento que tenemos que sera el adapter
+        Una lista de restaurantes
+    4.2-Al final del programa antes de devolver la vista asociamos el adapter al recicle view
+        El adapter que hemos creado antes = nuevo adaptador del tipo del otro framento (pasamos el activity, y la lista de restaurantes)
+        El reciclyView creado antes.setAdapter(el adapter creado antes)
+    4.3-Al crear el layout se nos crean metodos algunos de estos no hay que tocarlos (instace, onCreate)
+    4.4-Metodo onCreateView
+        4.4.1-Los if que hay dentro de este metodo se quedan como estan
+        4.4.2-Declaramos la lista creada antes y la llenamos
+            Para poder meter url de imagenes en nuestro programa necesitamos en el grandle model la libreria de glide
+                //LIBRERIA GLIDE
+                implementation 'com.github.bumptech.glide:glide:4.12.0'
+                annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+            Y en el manifest añadir que pueda acceder a internet
+                <uses-permission android:name="android.permission.INTERNET"/>
+5-Vamos al actity que se llama MyRestauranteRecyclerViewAdapter
+    4.1- Declaramos dos variables necesaria para nuestro programa
+        Lista de restaurantes
+        Context
+    4.2-Creamos el constructor de las dos variables anteriores
+    4.3-Metodo onBindViewHolder (realiza el dibujado de la lista completa, es lanzado tantas veces como elementos tenemos en la lista)
+
+EN LOS LAYOUT
