@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Restaurantes.Restaurantes_Activity">
+    tools:context=".Hoteles.Hoteles_Activity">
     <fragment
         android:id="@+id/restauranteFragment"
-        android:name="com.lauramb.practica4_dashboard.Restaurantes.fragment.RestauranteFragment"
+        android:name="com.lauramb.practica4_dashboard.Hoteles.fragment.HotelFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

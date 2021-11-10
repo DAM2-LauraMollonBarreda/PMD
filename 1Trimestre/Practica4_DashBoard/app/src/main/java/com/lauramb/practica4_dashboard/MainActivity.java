@@ -13,7 +13,7 @@ import com.lauramb.practica4_dashboard.Galeria.Galeria_Activity;
 import com.lauramb.practica4_dashboard.Mapas.Mapas_Activity;
 import com.lauramb.practica4_dashboard.Musica.Musica_Activity;
 import com.lauramb.practica4_dashboard.Quizzes.Quizzes_Activity;
-import com.lauramb.practica4_dashboard.Restaurantes.Restaurantes_Activity;
+import com.lauramb.practica4_dashboard.Hoteles.Hoteles_Activity;
 import com.lauramb.practica4_dashboard.Settings.Settings_Activity;
 
 public class MainActivity extends AppCompatActivity {
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
         rellay_restaurantes.setOnClickListener(view -> {
-            Intent intent = new Intent(this, Restaurantes_Activity.class);
+            Intent intent = new Intent(this, Hoteles_Activity.class);
             startActivity(intent);
         });
         rellay_settings.setOnClickListener(view -> {

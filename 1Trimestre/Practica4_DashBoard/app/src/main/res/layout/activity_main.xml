@@ -294,7 +294,7 @@
                             android:adjustViewBounds="true"
                             android:padding="8dp"
                             android:scaleType="centerInside"
-                            android:src="@drawable/restaurantes"
+                            android:src="@drawable/hotel"
                             app:tint="@color/white"/>/>
 
                         <TextView
@@ -303,7 +303,7 @@
                             android:layout_below="@id/imgView7"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
-                            android:text="Restaurantes"
+                            android:text="Hoteles"
                             android:textColor="#0B0A0A"
                             android:textSize="14sp"
                             android:textStyle="bold" />

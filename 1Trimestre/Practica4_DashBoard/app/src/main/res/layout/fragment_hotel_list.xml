@@ -10,8 +10,8 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context=".Restaurantes.fragment.RestauranteFragment"
-    tools:listitem="@layout/fragment_restaurante" />
+    tools:context=".Hoteles.fragment.HotelFragment"
+    tools:listitem="@layout/fragment_hotel" />
 
 
 
