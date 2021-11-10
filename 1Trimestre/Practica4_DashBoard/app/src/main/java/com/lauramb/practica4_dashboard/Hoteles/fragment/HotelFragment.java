@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.lauramb.practica4_dashboard.R;
-import com.lauramb.practica4_dashboard.Restaurantes.fragment.placeholder.PlaceholderContent;
 import com.lauramb.practica4_dashboard.Restaurantes.model.Restaurante;
 
 import java.util.ArrayList;
@@ -79,9 +78,37 @@ public class RestauranteFragment extends Fragment {
 
             //7-Declaramos la lista que hemos creado antes y la llenamos
             restauranteList=new ArrayList<>();
-            restauranteList.add(new Restaurante("La trufa negra","https://estaticos-cdn.elperiodico.com/clip/f6f6d7d9-5a72-4730-bd4b-9534cdeb45d5_alta-libre-aspect-ratio_default_0.jpg",4.3f,"Mora de Rubielos,Teruel,España"));
+            restauranteList.add(new Restaurante("La trufa negra","https://estaticos-cdn.elperiodico.com/clip/f6f6d7d9-5a72-4730-bd4b-9534cdeb45d5_alta-libre-aspect-ratio_default_0.jpg",
+                    4.3f,"Mora de Rubielos,Teruel,España"));
+
+            restauranteList.add(new Restaurante("Masia la Torre","https://www.masialatorre.es/templates/yootheme/cache/Comuniones-02-139e3813.webp",
+                    4.7f,"Mora de Rubielos,Teruel,España"));
+
+            restauranteList.add(new Restaurante("Mas de cebrian","https://masdecebrian.com/img/paginas/1072119140.jpg",
+                    4.0f,"Puertomingalvo,Teruel,España"));
+
+            restauranteList.add(new Restaurante("Hosta Antiguo Hospital","https://hostalantiguohospital.es/wp-content/uploads/2017/10/ensalada.jpg",
+                    4.5f,"Linares de Mora,Teruel,España"));
+
+            restauranteList.add(new Restaurante("La posada","https://laposadademosqueruela.com/wp-content/uploads/2017/08/comer-mosqueruela.jpg",
+                    4.5f,"Mosqueruela,Teruel,España"));
+
+            restauranteList.add(new Restaurante("Existe","https://media-cdn.tripadvisor.com/media/photo-w/1d/9c/8b/76/existe-restaurante.jpg",
+                    3.0f,"Mosqueruela,Teruel,España"));
+
+            restauranteList.add(new Restaurante("Balfagon","",
+                    4.3f,"Cantavieja,Teruel,España"));
+
+            restauranteList.add(new Restaurante("La trufa negra","",
+                    4.3f,"Mora de Rubielos,Teruel,España"));
+
+            restauranteList.add(new Restaurante("La trufa negra","",
+                    4.3f,"Mora de Rubielos,Teruel,España"));
+
+            restauranteList.add(new Restaurante("La trufa negra","",
+                    4.3f,"Mora de Rubielos,Teruel,España"));
             //3-Asociamos el adatador al recicle view
-            adapterRestaurantes = new MyRestauranteRecyclerViewAdapter(getActivity(), restauranteList);
+            adapterRestaurantes = new MyRestauranteRecyclerViewAdapter(restauranteList,getActivity());
             recyclerView.setAdapter(adapterRestaurantes);
 
         }

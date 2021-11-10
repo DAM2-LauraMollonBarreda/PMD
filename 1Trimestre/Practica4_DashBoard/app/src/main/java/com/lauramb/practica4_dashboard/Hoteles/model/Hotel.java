@@ -1,4 +1,4 @@
-package com.lauramb.practica4_dashboard.Restaurantes.model;
+package com.lauramb.practica4_dashboard.Hoteles.model;
 
 public class Restaurante {
     //Datos que tiene un restaurante

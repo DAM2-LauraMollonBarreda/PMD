@@ -24,11 +24,18 @@ EN LOS ATIVITIS
                 annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
             Y en el manifest añadir que pueda acceder a internet
                 <uses-permission android:name="android.permission.INTERNET"/>
+
 5-Vamos al actity que se llama MyRestauranteRecyclerViewAdapter
     4.1- Declaramos dos variables necesaria para nuestro programa
         Lista de restaurantes
         Context
     4.2-Creamos el constructor de las dos variables anteriores
-    4.3-Metodo onBindViewHolder (realiza el dibujado de la lista completa, es lanzado tantas veces como elementos tenemos en la lista)
+    4.3-El metodo onCreateViewHolder puede dar error para solucionarlo se borra esa linea y se vuelve a escribir
+    4.4-Metodo onBindViewHolder (realiza el dibujado de la lista completa, es lanzado tantas veces como elementos tenemos en la lista)
+	4.4.1-Dentro de este metodo implementamos la carga de lo que tenemos en el layaut
+    4.5-En la clase del ViewHolder
+	4.5.1-Declaramos todos los elementos del layout y incluimos una variable de tipo restaurante
+	4.5.2-En el metodo view holder unimos los variables declaradas arriba con lo que tenemos en layout
+	4.5.3-En el constructor tenemos que cambiar el error por el nombre del restaurante
 
 EN LOS LAYOUT
