@@ -1,2 +1,13 @@
-package com.laura.a14retrofitv1;public interface JsonPlaceHolderApi {
+package com.laura.a14retrofitv1;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.http.GET;
+
+public interface JsonPlaceHolderApi {
+
+    @GET("posts")
+    Call<List<Post>> obtenerPostDeLaApi();
+
 }
