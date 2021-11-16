@@ -1,2 +1,15 @@
-package com.laura.a16_pokefit;public interface PokemonService {
+package com.laura.a16_pokefit;
+
+import com.laura.a16_pokefit.model.Pokemon;
+import com.laura.a16_pokefit.model.PokemonRespuesta;
+
+import retrofit2.Call;
+import retrofit2.http.GET;
+
+public interface PokemonService {
+
+    @GET("pokemon")
+    Call<PokemonRespuesta> obtenerListaPokemon();
+
+
 }

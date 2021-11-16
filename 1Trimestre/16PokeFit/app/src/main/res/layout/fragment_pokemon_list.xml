@@ -9,5 +9,6 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
+    android:background="@color/purple_200"
     tools:context=".PokemonFragment"
     tools:listitem="@layout/fragment_pokemon" />

@@ -2,26 +2,27 @@ package com.laura.a15cartapizzeria;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.laura.a15cartapizzeria.placeholder.PlaceholderContent.PlaceholderItem;
+
+import com.bumptech.glide.Glide;
 import com.laura.a15cartapizzeria.databinding.FragmentPizzaBinding;
 
 import java.util.List;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link PlaceholderItem}.
- * TODO: Replace the implementation with code for your data type.
- */
 public class MyPizzaRecyclerViewAdapter extends RecyclerView.Adapter<MyPizzaRecyclerViewAdapter.ViewHolder> {
 
-    private final List<PlaceholderItem> mValues;
+    private final List<Pizza> mValues;
+    private Context ctx;
 
-    public MyPizzaRecyclerViewAdapter(List<PlaceholderItem> items) {
+    public MyPizzaRecyclerViewAdapter(List<Pizza> items, Context context) {
         mValues = items;
+        ctx=context;
     }
 
     @Override
@@ -34,8 +35,14 @@ public class MyPizzaRecyclerViewAdapter extends RecyclerView.Adapter<MyPizzaRecy
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        holder.tvNombrePizza.setText(holder.mItem.getName());
+        holder.tvDescripcionPizza.setText(holder.mItem.getDescription());
+        //Asignar la imagen al image view
+        //Necesitare usar la libreria glide
+       Glide.with(ctx)
+               .load(holder.mItem.getImage())
+               .into(holder.ivImagenPizza);
+
     }
 
     @Override
@@ -44,19 +51,21 @@ public class MyPizzaRecyclerViewAdapter extends RecyclerView.Adapter<MyPizzaRecy
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public final TextView mIdView;
-        public final TextView mContentView;
-        public PlaceholderItem mItem;
+        public final TextView tvNombrePizza;
+        public final TextView tvDescripcionPizza;
+        public final ImageView ivImagenPizza;
+        public Pizza mItem;
 
         public ViewHolder(FragmentPizzaBinding binding) {
             super(binding.getRoot());
-            mIdView = binding.itemNumber;
-            mContentView = binding.content;
+            tvNombrePizza=binding.tvNombrePizza;
+            tvDescripcionPizza=binding.tvDescripcion;
+            ivImagenPizza=binding.ivPizzaImagen;
         }
 
         @Override
         public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
+            return super.toString() + " '" + tvNombrePizza.getText() + "'";
         }
     }
 }

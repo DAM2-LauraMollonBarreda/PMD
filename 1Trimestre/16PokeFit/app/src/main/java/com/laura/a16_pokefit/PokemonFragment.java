@@ -8,15 +8,23 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.laura.a16_pokefit.placeholder.PlaceholderContent;
+import com.laura.a16_pokefit.model.Pokemon;
+import com.laura.a16_pokefit.model.PokemonRespuesta;
 
-/**
- * A fragment representing a list of Items.
- */
+import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+
 public class PokemonFragment extends Fragment {
 
     // TODO: Customize parameter argument names
@@ -24,10 +32,11 @@ public class PokemonFragment extends Fragment {
     // TODO: Customize parameters
     private int mColumnCount = 3;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
+    RecyclerView recyclerView;
+    MyPokemonRecyclerViewAdapter adaptador;
+    Retrofit retrofit;
+
+
     public PokemonFragment() {
     }
 
@@ -53,19 +62,55 @@ public class PokemonFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_item_pokemon, container, false);
+        View view = inflater.inflate(R.layout.fragment_pokemon_list, container, false);
 
         // Set the adapter
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
+             recyclerView= (RecyclerView) view;
             if (mColumnCount <= 1) {
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyPokemonRecyclerViewAdapter(PlaceholderContent.ITEMS));
+
+            retrofit = new Retrofit.Builder()
+                    .baseUrl("https://pokeapi.co/api/v2/")
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+
+            obtenerDatos (retrofit,context);
+
+
         }
         return view;
+    }
+
+    private void obtenerDatos(Retrofit retrofit, Context context) {
+        PokemonService service = retrofit.create(PokemonService.class);
+        Call<PokemonRespuesta> pokemonRespuestaCall = service.obtenerListaPokemon();
+
+        pokemonRespuestaCall.enqueue(new Callback<PokemonRespuesta>() {
+            @Override
+            public void onResponse(Call<PokemonRespuesta> call, Response<PokemonRespuesta> response) {
+                if (response.isSuccessful()){
+                    PokemonRespuesta pokemonRespuesta = response.body();
+                    //Pokemon respuesta es una clase que nosotros que nosotros creamos y que tiene un array list en java
+                    // con el listado de los objetos pokemon
+                    ArrayList<Pokemon> listaPokemon= pokemonRespuesta.getResults();
+
+                    adaptador = (new MyPokemonRecyclerViewAdapter(listaPokemon,context));
+                    recyclerView.setAdapter(adaptador);
+                }else{
+                    Log.e("pokemon", "On response "+ response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<PokemonRespuesta> call, Throwable t) {
+                Log.e("pokemon", "On failure "+ t.getMessage());
+            }
+        });
+
     }
 }
