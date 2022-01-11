@@ -1,0 +1,101 @@
+https://esflutter.dev/   en castellano
+https://flutter.dev/     en ingles
+https://flutterawesome.com/tag/templates/ 
+https://fluttergems.dev/
+https://pub.dev/ (librerias)
+
+
+¿Donde se crea una aplicacion de flutter?
+	-Android studio
+	-Visual studio
+Instalacion 
+	https://docs.flutter.dev/get-started/install
+	windows 
+	desgargar el zip
+	android stuio
+	mirar a ver si hay android 12.0 y 11.0
+	plugins instalar dart flutter
+	variables de entorno
+	el cuadrado de abajo en path añadir la ruta de la carpeta de flutter bin 
+	añadir nueva flutter y la ruta
+	comparar con cmd   flutter --version
+                           flutter doctor
+
+	android stuido sdk tools, seleccionar SDK Build-Tools 32 y Android SDK Command-line Tools (latest)
+	cmd flutter doctor --android-licenses
+	    flutter doctor 
+
+
+
+
+DART (https://dartpad.dev)
+dynamic es cualquier cosa
+
+
+void main(){
+ int i;
+ for(i=1;i<5; i++){
+   print('La variable i vale: $i');
+ }
+}
+
+
+void main(){
+  //STRINGS
+  String nombre = 'Laura';
+  //No cambia 
+  final String apellido = 'Mollon';
+  final apellido2 = 'Barreda'; 
+  print('$nombre - $apellido-$apellido2');
+
+ 
+  //NUMEROS
+  int empleados = 10;
+  double salario=1890.43;
+  
+  print("Numero de empleado $empleados:$salario");
+  
+  
+  //BOOLEANOS
+  bool activo = true;
+  if(activo){
+    print('Esta activo ');
+  }else{
+    print('No esta activo ');
+  }
+  
+  //Si no tiene el simbolo interrogante no puede ser null
+  bool? isActive = null;
+  if(isActive == null){
+    print('No existe ');
+  }else{
+    print('Existe');
+  }
+
+
+  //ARRAYS O LISTAS
+  List varios = [1,2,3,4,5,6,7,8,9,10];
+  //Para añadir 
+  varios.add("Laura");
+  print(varios);
+  
+  List<int> numeros = [1,2,3,4,5,6,7,8,9,10];
+  //Para añadir 
+  numeros.add(11);
+  print(numeros);
+  
+  //generamos una lista de 100 elementos
+  final masNumeros = List.generate(100,(int index)=>index);
+  print(masNumeros);
+
+ //DICCIONARIOS O MAPAS
+  Map <String,dynamic> persona={
+    'nombre':'Laura',
+    'edad':40,
+    'soltero': true
+  };  
+  print(persona);
+
+}
+
+	
