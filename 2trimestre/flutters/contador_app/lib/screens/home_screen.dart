@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       body: Column(
-        children: [
+        children: const[
           Text("Hola a todos"),
           Text("Hola a todos"),
           Text("Hola a todos"),
