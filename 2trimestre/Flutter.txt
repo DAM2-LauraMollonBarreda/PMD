@@ -4,6 +4,10 @@ https://flutterawesome.com/tag/templates/
 https://fluttergems.dev/
 https://pub.dev/ (librerias)
 
+TUTORAIALES INTERESANTES
+	https://www.youtube.com/watch?v=x4DydJKVvQk
+	https://www.youtube.com/watch?v=sqkmEp7q7L8 (que es flutter)
+
 
 ¿Donde se crea una aplicacion de flutter?
 	-Android studio
