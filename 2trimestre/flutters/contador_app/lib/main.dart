@@ -1,3 +1,4 @@
+import 'package:contador_app/screens/contador_screen.dart';
 import 'package:contador_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,8 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
       //Widget madre
       return MaterialApp(
+        //Para quitar el banner de debug
         debugShowCheckedModeBanner: false,
-        home: HomeScreen(),
+        //Llamamo a la clase HomeScren (home_screen.dart) que esta en otro fichero
+        //home: HomeScreen(),
+        home: ContadorScreen()
       );
   }
 
