@@ -18,7 +18,7 @@ public class DetalleActivity_Musica extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_musica);
 
-        item = (Disco) getIntent().getSerializableExtra("item");
+        item = (Disco)getIntent().getSerializableExtra("item");
         if (item!=null){
             tvTitulo = findViewById(R.id.txtTitulo);
             tvTitulo2 = findViewById(R.id.txtTitulo2);

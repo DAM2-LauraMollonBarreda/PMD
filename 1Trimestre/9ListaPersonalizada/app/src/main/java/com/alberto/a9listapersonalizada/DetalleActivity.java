@@ -19,7 +19,8 @@ public class DetalleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle);
 
-        item = (Entidad) getIntent().getSerializableExtra("item");
+
+        item = (Entidad)getIntent().getSerializableExtra("item");
         if (item!=null){
             tvTitulo = findViewById(R.id.tvTituloDetalle);
             tvDescripcion = findViewById(R.id.tvDescripcionDetalle);

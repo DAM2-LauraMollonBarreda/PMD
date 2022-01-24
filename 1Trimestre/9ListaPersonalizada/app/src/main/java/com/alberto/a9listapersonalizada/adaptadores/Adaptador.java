@@ -75,9 +75,6 @@ public class Adaptador extends BaseAdapter {
         });
 
 
-
-
-
         return convertView;
     }
 }
