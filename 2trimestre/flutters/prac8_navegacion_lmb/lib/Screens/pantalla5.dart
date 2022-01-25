@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Pantalla5Screen extends StatelessWidget {
-   
+    final opciones = ['pantalla2', 'pantalla4'];
   
   
   @override
@@ -22,21 +22,21 @@ class Pantalla5Screen extends StatelessWidget {
       body: ListView.separated(
         itemBuilder: (context, index) {
           return ListTile(
-            title: Text('Pantalla 2'),
+            title: Text(opciones[index]),
             //Icono que sale al principio
             leading: Icon(Icons.list),
             //Icono que sale al final
             trailing: Icon(Icons.arrow_forward_ios_outlined),
             //Cuando se hace click en la lista
             onTap: (){
-                Navigator.pushNamed(context, 'pantalla2');
+                Navigator.pushNamed(context, opciones[index]);
             },
           );
         },
         //Separa cada uno de los elementos de la lista
         separatorBuilder: (_ , __)=> Divider(),
         //Numero de elemntos que tiene la lista
-        itemCount: 1,
+        itemCount: opciones.length,
       ),
      floatingActionButton: Row(
         //Donde se localizara el boton
@@ -45,7 +45,7 @@ class Pantalla5Screen extends StatelessWidget {
           FloatingActionButton(
             child: const Icon(Icons.home), 
             onPressed: (){
-             Navigator.pushReplacementNamed(context, 'pantalla1');
+             Navigator.pushNamedAndRemoveUntil(context, 'pantalla1', (route) => false);
             },
           )
         ],
