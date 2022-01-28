@@ -23,9 +23,9 @@ class FormularioScreen extends StatelessWidget {
                   print('Valor: $value');
                 },
                 validator: (value){
-                  if(value==null) return 'Este campo es requerido';
+                  if(value=='') return 'Este campo es requerido';
                 },
-                autovalidateMode: AutovalidateMode.always,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
               )
             ],
           ),

@@ -1,3 +1,5 @@
+
+
 import 'screens/screens.dart';
 import 'package:flutter/material.dart';
 
@@ -25,6 +27,7 @@ class MyApp extends StatelessWidget {
         'lista2': (BuildContext context)=> Listview2Screen(),
         'alerta': (BuildContext context)=> AlertScreen(),
         'card': (BuildContext context)=> CardScreen(),
+        'formulario': (BuildContext context)=> FormularioScreen(),
         
       },
     );
