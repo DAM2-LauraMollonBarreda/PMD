@@ -8,8 +8,10 @@ TUTORAIALES INTERESANTES
 	https://www.youtube.com/watch?v=x4DydJKVvQk
 	https://www.youtube.com/watch?v=sqkmEp7q7L8 (que es flutter)
 	https://www.youtube.com/watch?v=O3g6H7Z77So
+	
+	https://pub.dev/packages/curved_navigation_bar (barra navegacion)
 
-
+	https://fluttergems.dev/ (widgets)
 ¿Donde se crea una aplicacion de flutter?
 	-Android studio
 	-Visual studio
