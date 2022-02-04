@@ -1,5 +1,7 @@
 
 
+
+
 import 'screens/screens.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +30,7 @@ class MyApp extends StatelessWidget {
         'alerta': (BuildContext context)=> AlertScreen(),
         'card': (BuildContext context)=> CardScreen(),
         'formulario': (BuildContext context)=> FormularioScreen(),
+        'navegacion': (BuildContext context)=> NavigationBarScreen(),
         
       },
     );

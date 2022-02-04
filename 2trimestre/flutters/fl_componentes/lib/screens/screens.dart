@@ -4,3 +4,4 @@ export 'package:fl_componentes/screens/card_screen.dart';
 export 'package:fl_componentes/screens/listview1_screen.dart';
 export 'package:fl_componentes/screens/listview2_screen.dart';
 export 'package:fl_componentes/screens/formulario_screen.dart';
+export 'package:fl_componentes/screens/navigationbar_screen.dart';

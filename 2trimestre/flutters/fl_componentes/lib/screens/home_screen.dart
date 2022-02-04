@@ -44,8 +44,13 @@ class HomeScreen extends StatelessWidget {
             trailing: const Icon(Icons.arrow_forward_ios_outlined),
             onTap: ()=> Navigator.pushNamed(context, 'formulario'),
           ),
-          const Divider(),
-
+         const Divider(),
+          ListTile(
+            title: const Text('Navegacion'),
+            leading: const Icon(Icons.navigation_outlined),
+            trailing: const Icon(Icons.arrow_forward_ios_outlined),
+            onTap: ()=> Navigator.pushNamed(context, 'navegacion'),
+          ),
           
         ],
       )
